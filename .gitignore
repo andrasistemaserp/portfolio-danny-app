@@ -37,3 +37,4 @@ yarn-error.log*
 .vscode
 package-lock.json
 package - Copia.json
+yarn.lock

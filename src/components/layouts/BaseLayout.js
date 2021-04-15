@@ -10,7 +10,8 @@ const BaseLayout = (props) => {
       <Header
         className={navClass}
         user={user}
-        loading={loading} />
+        loading={loading}
+      />
       <main className={`cover ${className}`}>
         <div className="wrapper">
           {children}

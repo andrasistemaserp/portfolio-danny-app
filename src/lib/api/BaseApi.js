@@ -14,12 +14,20 @@ class BaseApi {
     this.apiUrl = process.env.PORTFOLIO_API_URL + subPath
   }
 
+  async getAll() {
+    return axios.get(this.apiUrl)
+  }
+
   async getById(id) {
     return axios.get(`${this.apiUrl}/${id}`)
   }
 
   async getByUser() {
     return axios.get(`${this.apiUrl}/profile`, this.config)
+  }
+
+  async getBySlug(slug) {
+    return axios.get(`${this.apiUrl}/s/${slug}`)
   }
 
   async create(data) {

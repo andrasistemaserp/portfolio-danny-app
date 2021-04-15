@@ -7,10 +7,6 @@ class PortfoliosApi extends BaseApi {
     super(accessToken, '/portfolios')
   }
 
-  async getAll() {
-    return axios.get(this.apiUrl)
-  }
-
   async delete(id) {
     return axios.delete(`${this.apiUrl}/${id}`, this.config)
   }

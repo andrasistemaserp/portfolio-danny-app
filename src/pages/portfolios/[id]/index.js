@@ -26,8 +26,8 @@ const Portfolio = ({ portfolio }) => {
       <BasePage
         noWrapper
         indexPage
-        title={`${portfolio.title} - Danny Andrade`}
-        metaDescription={portfolio.description}>
+        title={`${!router.isFallback ? portfolio.title : ''} - Danny Andrade`}
+        metaDescription={!router.isFallback ? portfolio.description : ''}>
         {/* {JSON.stringify(portfolio)} */}
         <div className="portfolio-detail">
           <div className="cover-container d-flex h-100 p-3 mx-auto flex-column">
